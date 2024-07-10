@@ -1,0 +1,35 @@
+﻿@model Bao.Models.Category
+
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h1>Edit Current Category Information:</h1>
+    <br /><hr /><br />
+    <form method="post" asp-action="Edit" asp-controller="Category">
+        <table border='1'>
+            <tr>
+                <th><label asp-for="categoryId"></label></th>
+                <td><input asp-for="categoryId" readonly /></td>
+            </tr>
+            <tr>
+                <th><label asp-for="categoryName"></label></th>
+                <td><input asp-for="categoryName" /></td>
+                <td><span asp-validation-for="categoryName"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="Status"></label></th>
+                <td><input asp-for="Status" type="checkbox" /></td>
+                <td><span asp-validation-for="Status"></span></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:center">
+                    <button type="submit" class="btn-info">Update Category Information</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>

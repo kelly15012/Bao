@@ -1,0 +1,114 @@
+﻿@model List<Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .table-container {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+        .table-container h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #221712; /* Dark Color */
+        }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-container th, .table-container td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #C0BFB2; /* Neutral Color */
+        }
+
+        .table-container th {
+            background-color: #771011; /* Primary Color */
+            color: #ECE6D3; /* Light Color */
+        }
+
+        .table-container tr:nth-child(even) {
+            background-color: #ECE6D3; /* Light Color */
+        }
+
+        .table-container tr:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+
+        .table-container tr:hover {
+            background-color: #C0BFB2; /* Neutral Color */
+        }
+
+    .btn-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #771011; /* Primary Color */
+        font-size: 1.2em;
+    }
+
+        .btn-icon:hover {
+            color: #6F635B; /* Secondary Color */
+        }
+
+    .action-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        background-color: #771011; /* Primary Color */
+        border-color: #771011; /* Primary Color */
+    }
+
+        .btn-primary:hover {
+            background-color: #6F635B; /* Secondary Color */
+            border-color: #6F635B; /* Secondary Color */
+        }
+</style>
+
+<div class="table-container">
+    <center>
+        <h1>Category Management</h1>
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Create New Category</a>
+        </p>
+        <table border="1">
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Modified At</th>
+                <th>Actions</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.categoryId</td>
+                    <td>@item.categoryName</td>
+                    <td>@item.Status</td>
+                    <td>@item.CreateAt</td>
+                    <td>@item.ModifiedAt</td>
+                    <td class="action-icons">
+                        <a asp-action="Edit" asp-controller="Category" asp-route-CategoryId="@item.categoryId" class="btn-icon">
+                            Edit
+                        </a>
+                        <form asp-action="Delete" asp-controller="Category" asp-route-CategoryId="@item.categoryId" onsubmit="return confirm('Are you sure you want to delete this category?');" style="display:inline;">
+                            <button type="submit" class="btn-icon">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+    </center>
+</div>

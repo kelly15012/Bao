@@ -1,0 +1,31 @@
+﻿@model Bao.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h1>Add Category:</h1>
+    <hr />
+    <form asp-action="Create" method="post">
+        <table>
+            <tr>
+                <th><label asp-for="categoryName"></label></th>
+                <td><input asp-for="categoryName" required /></td>
+                <td><span asp-validation-for="categoryName"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="Status"></label></th>
+                <td><input asp-for="Status" type="checkbox"/></td>
+                <td><span asp-validation-for="Status"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="Add Category" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
+
