@@ -1,0 +1,29 @@
+﻿@model Bao.Models.Staff
+<center>
+    <h1>Add Admin</h1>
+    <hr />
+    <form asp-action="AddData" method="post">
+        <table>
+            <tr>
+                <th><label asp-for="Email"></label> </th>
+                <td><input asp-for="Email" required /></td>
+                <td><span asp-validation-for="Email"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="Password"></label> </th>
+                <td><input asp-for="Password" required /></td>
+                <td><span asp-validation-for="Password"></span></td>
+            </tr>
+            <tr>
+                <th><label asp-for="ConfirmPassword"></label> </th>
+                <td><input asp-for="ConfirmPassword" required /></td>
+                <td><span asp-validation-for="ConfirmPassword"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="Register Admin" value="Add Data to table" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</center> 
