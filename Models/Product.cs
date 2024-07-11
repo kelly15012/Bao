@@ -23,8 +23,11 @@ namespace Bao.Models
         [Required]
         public int Quantity { get; set; }
 
-        [Required]
         public byte[] ? CoverImage { get; set; }
+
+        public string ? FileName { get; set; }
+
+        public string ? ContentType { get; set; }
 
         // Foreign Key
         [ForeignKey("Category")]

@@ -69,25 +69,42 @@ namespace Bao.Controllers.Admin
         // POST: Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ProdCreate([Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CategoryId,Status")] Product product, IFormFile coverImageFile)
+        public async Task<IActionResult> ProdCreate([Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CategoryId,Status")] Product product)
         {
             _logger.LogInformation("Received product: {@Product}", product);
-            if (coverImageFile != null)
-            {
-                _logger.LogInformation("Received cover image file: {FileName}, Length: {Length}", coverImageFile.FileName, coverImageFile.Length);
-            }
+            //if (coverImageFile != null)
+            //{
+            //    _logger.LogInformation("Received cover image file: {FileName}, Length: {Length}", coverImageFile.FileName, coverImageFile.Length);
+            //}
 
             if (ModelState.IsValid)
             {
                 _logger.LogInformation("ModelState is valid.");
-                if (coverImageFile != null && coverImageFile.Length > 0)
+
+                var file = Request.Form.Files.GetFile("productImage");
+                if (file != null && file.Length > 0)
                 {
                     using (var memoryStream = new MemoryStream())
                     {
-                        await coverImageFile.CopyToAsync(memoryStream);
+                        await file.CopyToAsync(memoryStream);
                         product.CoverImage = memoryStream.ToArray();
+                        product.FileName = file.FileName;
+                        product.ContentType = file.ContentType;
                     }
                 }
+                else
+                {
+                    return BadRequest("Proof of delivery is required for 'Delivered' status.");
+                }
+
+                //if (coverImageFile != null && coverImageFile.Length > 0)
+                //{
+                //    using (var memoryStream = new MemoryStream())
+                //    {
+                //        await coverImageFile.CopyToAsync(memoryStream);
+                //        product.CoverImage = memoryStream.ToArray();
+                //    }
+                //}
 
                 product.CreateAt = DateTime.Now;
                 product.ModifiedAt = DateTime.Now;
