@@ -17,135 +17,135 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bao
 build_property.RootNamespace = Bao
-build_property.ProjectDir = C:\Users\Imelda\source\repos\Bao\
+build_property.ProjectDir = C:\Users\DANNY HO\source\repos\Bao\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Imelda\source\repos\Bao
+build_property.MSBuildProjectDirectory = C:\Users\DANNY HO\source\repos\Bao
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Admin/aLanding.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Admin/aLanding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYUxhbmRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Baozi/bLanding.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Baozi/bLanding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcYkxhbmRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Category/Create.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Category/Edit.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Category/Index.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Home/Index.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Home/Privacy.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Manager/ManageStaff.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Manager/ManageStaff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxNYW5hZ2VTdGFmZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Manager/mLanding.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Manager/mLanding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxtTGFuZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Product/ProdCreate.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Product/ProdCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Product/ProdIndex.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Product/ProdIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Shared/Error.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Shared/_ManagerLayout.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Shared/_ManagerLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2VyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/_ViewImports.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/_ViewStart.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Imelda/source/repos/Bao/Views/Shared/_Layout.cshtml]
+[C:/Users/DANNY HO/source/repos/Bao/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-79nlcrpfxa

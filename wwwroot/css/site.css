@@ -20,3 +20,40 @@ html {
 body {
     margin-bottom: 60px;
 }
+
+/*override styles*/
+:root {
+    --bs-primary: #cb8d95;
+    --bs-secondary: #f8e9eb;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(203, 141, 149, var(--bs-bg-opacity)) !important;
+}
+
+.bg-secondary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(248, 233, 235, var(--bs-bg-opacity)) !important;
+}
+
+.btn-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(203, 141, 149, var(--bs-bg-opacity)) !important;
+    border-color: #cb8d95;
+}
+
+.btn-secondary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(248, 233, 235, var(--bs-bg-opacity)) !important;
+    border-color: #f8e9eb;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #cb8d95;
+}
+
+.nav-link{
+    color: midnightblue;
+}

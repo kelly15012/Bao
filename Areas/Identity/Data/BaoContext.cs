@@ -16,6 +16,7 @@ public class BaoContext : IdentityDbContext<BaoUser>
 
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
+    //public DbSet<Promotions> PromotionsTable { get; set; } //newly add but yet to migrate
 
     protected override void OnModelCreating(ModelBuilder builder)
     { 
