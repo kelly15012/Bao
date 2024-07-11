@@ -31,12 +31,9 @@ namespace Bao.Models
 
         // Foreign Key
         [ForeignKey("Category")]
-        [Required]
         public int CategoryId { get; set; }
-
-        // Navigation property
-        [Required]
-        public Category Category { get; set; } = null!;
+        //virtual keyword is used to allow lazy loading
+        public virtual Category? Category { get; set; }
 
         [Required]
         public bool Status { get; set; }

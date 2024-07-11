@@ -33,18 +33,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
-                @{
-                    if (ViewBag.CategoryId != null)
-                    {
-                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId" required></select>
-                    }
-                    else
-                    {
-                        <select asp-for="CategoryId" class="form-control" required>
-                            <option value="">No categories available</option>
-                        </select>
-                    }
-                }
+                <select asp-for="CategoryId" class="form-control" asp-items="@(ViewBag.CategoryId)" required>
+                    <option value="">Select a category</option>
+                </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">

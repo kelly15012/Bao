@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Bao.Controllers.Admin
 {
@@ -54,7 +57,7 @@ namespace Bao.Controllers.Admin
         // POST: Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ProdCreate([Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CategoryId,Status")] Product product)
+        public async Task<IActionResult> ProdCreate([Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CategoryId,Status,CreateAt,ModifiedAt")] Product product)
         {
             _logger.LogInformation("Received product: {@Product}", product);
 
@@ -95,17 +98,8 @@ namespace Bao.Controllers.Admin
                     }
                 }
             }
-            PopulateCategoriesDropDownList(product.CategoryId);
+            ViewBag.CategoryId = new SelectList(_context.Categories, "categoryId", "categoryName", product.CategoryId);
             return View(product);
         }
-
-        private void PopulateCategoriesDropDownList(object? selectedCategory = null)
-        {
-            var categoriesQuery = from c in _context.Categories
-                                  orderby c.categoryName
-                                  select c;
-            ViewBag.CategoryId = new SelectList(categoriesQuery.AsNoTracking(), "categoryId", "categoryName", selectedCategory);
-        }
-
     }
 }
