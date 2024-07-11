@@ -160,7 +160,7 @@ namespace Bao.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
-                    //var roleRsult = await _userManager.AddToRoleAsync(user, "role name");
+                    // var roleRsult = await _userManager.AddToRoleAsync(user, "role name");
                     _logger.LogInformation("User created a new account with password.");
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
