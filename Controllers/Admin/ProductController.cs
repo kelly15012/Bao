@@ -52,30 +52,12 @@ namespace Bao.Controllers.Admin
         }
 
         // POST: Product/Create
-        //public async Task<IActionResult> ProdCreate([Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CoverImage,CategoryId,Status,CreateAt,ModifiedAt")] Product product)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        product.CreateAt = DateTime.Now;
-        //        product.ModifiedAt = DateTime.Now;
-        //        _context.Add(product);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(ProdIndex));
-        //    }
-        //    ViewData["categoryId"] = new SelectList(_context.Categories, "categoryId", "categoryName", product.CategoryId);
-        //    return View(product);
-        //}
-
-        // POST: Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ProdCreate([Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CategoryId,Status")] Product product)
         {
             _logger.LogInformation("Received product: {@Product}", product);
-            //if (coverImageFile != null)
-            //{
-            //    _logger.LogInformation("Received cover image file: {FileName}, Length: {Length}", coverImageFile.FileName, coverImageFile.Length);
-            //}
+
 
             if (ModelState.IsValid)
             {
@@ -94,17 +76,8 @@ namespace Bao.Controllers.Admin
                 }
                 else
                 {
-                    return BadRequest("Proof of delivery is required for 'Delivered' status.");
+                    return BadRequest("A product image is required.");
                 }
-
-                //if (coverImageFile != null && coverImageFile.Length > 0)
-                //{
-                //    using (var memoryStream = new MemoryStream())
-                //    {
-                //        await coverImageFile.CopyToAsync(memoryStream);
-                //        product.CoverImage = memoryStream.ToArray();
-                //    }
-                //}
 
                 product.CreateAt = DateTime.Now;
                 product.ModifiedAt = DateTime.Now;

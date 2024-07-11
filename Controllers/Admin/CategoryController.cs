@@ -19,14 +19,14 @@ namespace Bao.Controllers.Admin
         }
 
         // GET: Category
-        public async Task<IActionResult> ProdIndex()
+        public async Task<IActionResult> Index()
         {
             List<Category> categories = await _context.Categories.ToListAsync();
             return View(categories);
         }
 
         // GET: Category/Create
-        public IActionResult ProdCreate()
+        public IActionResult Create()
         {
             return View();
         }
