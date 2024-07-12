@@ -16,7 +16,11 @@ public class BaoContext : IdentityDbContext<BaoUser>
 
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
-    //public DbSet<Promotions> PromotionsTable { get; set; } //newly add but yet to migrate
+    public DbSet<Cart> Carts { get; set; }
+    public DbSet<LoyaltyPoint> LoyaltyPoints { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderItem> OrderItems { get; set; }
+    public DbSet<Promotion> Promotions { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     { 

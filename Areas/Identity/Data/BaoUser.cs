@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Bao.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace Bao.Areas.Identity.Data
@@ -56,5 +57,8 @@ namespace Bao.Areas.Identity.Data
 
         [PersonalData]
         public DateTime ModifiedAt { get; set; }
+
+        // Navigation properties
+        public virtual ICollection<Order>? Orders { get; set; }
     }
 }
