@@ -52,10 +52,6 @@ namespace Bao.Areas.Identity.Data
         public string? Country { get; set; }
 
         [PersonalData]
-        [StringLength(20)]
-        public string? Role { get; set; }
-
-        [PersonalData]
         public DateTime CreateAt { get; set; }
 
         [PersonalData]

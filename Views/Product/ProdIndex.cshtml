@@ -84,6 +84,7 @@
             <tr>
                 <th>Product ID</th>
                 <th>Product Name</th>
+                <th>Image</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -98,6 +99,16 @@
                 <tr>
                     <td>@item.ProductId</td>
                     <td>@item.ProductName</td>
+                    <td>
+                        @if (item.CoverImage != null && item.ContentType != null)
+                        {
+                            <img src="data:@item.ContentType;base64,@Convert.ToBase64String(item.CoverImage)" alt="Product Image" width="100" height="100" />
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                    </td>
                     <td>@item.ProductDescription</td>
                     <td>@item.Price</td>
                     <td>@item.Quantity</td>
