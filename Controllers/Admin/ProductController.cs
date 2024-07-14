@@ -251,7 +251,7 @@ namespace Bao.Controllers.Admin
         public async Task<IActionResult> ProdMenu()
         {
             var products = await _context.Products.Include(p => p.Category).ToListAsync();
-            return View("ProdMenu", products);
+            return View(products);
         }
     }
 }

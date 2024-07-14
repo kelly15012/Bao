@@ -57,3 +57,8 @@ body {
 .nav-link{
     color: midnightblue;
 }
+
+.badge-info {
+    background-color: #cb8d95;
+    border-radius: 20px;
+}
