@@ -3,6 +3,91 @@
     Layout = "~/Views/Shared/_ManagerLayout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to the Manager Landing Page!</h1>
+
+<div class=" bg-secondary container-fluid">
+    <div class=" container text-lg-left py-3">
+        <h1 class="display-4 py-3">Dashboard</h1>
+    </div>
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h6 class="card-title">Total Users: </h6>
+                        @* fetch data from database *@
+                        <h2 class="card-text-custom">1,234</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h6 class="card-title">Total Orders of the day: </h6>
+                        @* fetch data from database *@
+                        <h2 class="card-text-custom">567</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h6 class="card-title">Campaigns Ongoing: </h6>
+                        @* fetch data from database *@
+                        <h2 class="card-text-custom">3</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class=" container text-lg-center py-3">
+        <h3 class="py-3">Manager Panel</h3>
+    </div>
+    <div class="row justify-content-start">
+        <div class=".col-6 col mb-4">
+            <div class="card bg-secondary text-dark">
+                <h6 class="card-title-custom">Staff Management</h6>
+            </div>
+            <p class="container-custom justify-content-center">This section is for manage and schedule all the staff.</p>
+            <div class="container-custom d-flex align-items-sm-center">
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Manage</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Schedule</a>
+            </div>
+        </div>
+        <div class=".col-6 col mb-4">
+            <div class="card bg-secondary text-dark">
+                <h6 class="card-title-custom">Inventory Management</h6>
+            </div>
+            <p class="container-custom justify-content-center">This section is for you to view and manage the inventory of the products.</p>
+            <div class="container-custom d-flex align-items-sm-center">
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">View</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Manage</a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row justify-content-start">
+        <div class=".col-6 col mb-4">
+            <div class="card bg-secondary text-dark">
+                <h6 class="card-title-custom">Operations and Customer Relations</h6>
+            </div>
+            <p class="btn-container-custom justify-content-center">This section is for you to monitor operations and handle customer issues.</p>
+            <div class="container-custom d-flex align-items-sm-center">
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Monitor Operations</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Handle Customer Issues</a>
+            </div>
+        </div>
+        <div class=".col-6 col mb-4">
+            <div class="card bg-secondary text-dark">
+                <h6 class="card-title-custom">Performance Monitoring</h6>
+            </div>
+            <p class="container-custom justify-content-center">This section is for you to view KPI and generate reports.</p>
+            <div class="container-custom d-flex align-items-sm-center">
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">View</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Generate</a>
+            </div>
+        </div>
+    </div>
 </div>

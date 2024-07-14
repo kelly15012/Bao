@@ -30,7 +30,7 @@
                                 <p class="card-text">@product.ProductDescription</p>
                             }
                             <div class="d-flex justify-content-between">
-                                <a asp-action="#" class="btn btn-primary btn-sm">View Details</a>
+                                <a asp-action="ProdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="btn btn-primary btn-sm">View Details</a>
                                 <a asp-action="#" class="btn btn-secondary text-dark btn-sm">Add to Cart</a>
                             </div>
                         </div>
