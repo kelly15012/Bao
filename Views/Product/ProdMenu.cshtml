@@ -31,7 +31,7 @@
                             }
                             <div class="d-flex justify-content-between">
                                 <a asp-action="ProdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="btn btn-primary btn-sm">View Details</a>
-                                <a asp-action="#" class="btn btn-secondary text-dark btn-sm">Add to Cart</a>
+                                <button class="btn btn-secondary text-dark btn-sm add-to-cart" data-id="@product.ProductId">Add to Cart</button>
                             </div>
                         </div>
                     </div>
