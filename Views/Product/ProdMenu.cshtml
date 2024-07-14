@@ -47,5 +47,21 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-}
-
+    <script>
+        $(document).ready(function () {
+            $(".add-to-cart").click(function () {
+                var productId = $(this).data("id");
+                $.ajax({
+                    url: '@Url.Action("AddToCart", "Product")',
+                    type: 'POST',
+                    data: { id: productId },
+                    success: function (result) {
+                        alert("Product added to cart");
+                    },
+                    error: function () {
+                        alert("Error adding product to cart");
+                    }
+                });
+            });
+        });
+    </script>
