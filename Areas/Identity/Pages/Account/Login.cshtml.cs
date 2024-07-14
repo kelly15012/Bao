@@ -21,11 +21,13 @@ namespace Bao.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly SignInManager<BaoUser> _signInManager;
+        private readonly UserManager<BaoUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<BaoUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<BaoUser> signInManager, ILogger<LoginModel> logger, UserManager<BaoUser> userManager)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
             _logger = logger;
         }
 
@@ -115,6 +117,25 @@ namespace Bao.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+
+                    var user = await _userManager.FindByEmailAsync(Input.Email);
+                    var roles = await _userManager.GetRolesAsync(user);
+
+                    if (roles.Contains("Admin"))
+                    {
+                        _logger.LogInformation("Admin logged in.");
+                        return RedirectToAction("aLanding", "Admin");
+                    }
+                    else if (roles.Contains("Manager"))
+                    {
+                        _logger.LogInformation("Manager logged in.");
+                        return RedirectToAction("mLanding", "Manager");
+                    }
+                    else if (roles.Contains("Baozi"))
+                    {
+                        _logger.LogInformation("Baozi logged in.");
+                        return RedirectToAction("bLanding", "Baozi");
+                    }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
