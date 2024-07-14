@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Bao.Models.Product>
+
+@{
+    ViewData["Title"] = "ProductMenu";
+}
+
+<h1 class="m-3">Product Menu</h1>
+<div class="container" style="width: 100vw; height: 100vw;">
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var product in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        @if (product.CoverImage != null && product.ContentType != null)
+                        {
+                            <img src="data:@product.ContentType;base64,@Convert.ToBase64String(product.CoverImage)" alt="Product Image" height="200" />
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@product.ProductName</h5>
+                            <p class="card-text">Price: @product.Price.ToString("C")</p>
+                            <span class="badge badge-pill badge-info">@product.Category?.categoryName</span>
+                            @if (!string.IsNullOrEmpty(product.ProductDescription))
+                            {
+                                <p class="card-text">@product.ProductDescription</p>
+                            }
+                            <div class="d-flex justify-content-between">
+                                <a asp-action="#" class="btn btn-primary btn-sm">View Details</a>
+                                <a asp-action="#" class="btn btn-secondary text-dark btn-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No products available.</p>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

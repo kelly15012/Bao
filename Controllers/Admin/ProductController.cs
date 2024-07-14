@@ -26,6 +26,7 @@ namespace Bao.Controllers.Admin
         {
             var products = await _context.Products.Include(p => p.Category).ToListAsync();
             return View(products);
+
         }
 
         // GET: Product/Details
@@ -125,6 +126,7 @@ namespace Bao.Controllers.Admin
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ProdEdit(int id, [Bind("ProductId,ProductName,ProductDescription,Price,Quantity,CategoryId,Status,CreateAt,ModifiedAt")] Product product)
         {
+            _logger.LogInformation("ProductId from route: {Id}, ProductId from model: {ProductId}", id, product.ProductId); //test
             if (id != product.ProductId)
             {
                 return NotFound();
@@ -243,6 +245,12 @@ namespace Bao.Controllers.Admin
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(ProdIndex));
+        }
+
+        public async Task<IActionResult> ProdMenu()
+        {
+            var products = await _context.Products.Include(p => p.Category).ToListAsync();
+            return View("ProdMenu", products);
         }
     }
 }
