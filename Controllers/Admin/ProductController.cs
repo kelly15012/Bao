@@ -247,6 +247,7 @@ namespace Bao.Controllers.Admin
             return RedirectToAction(nameof(ProdIndex));
         }
 
+
         public async Task<IActionResult> ProdMenu()
         {
             var products = await _context.Products.Include(p => p.Category).ToListAsync();

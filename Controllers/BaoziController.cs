@@ -13,10 +13,5 @@ namespace Bao.Controllers
         {
             return View();
         }
-
-        public IActionResult ProdMenu()
-        {
-            return View();
-        }
     }
 }
