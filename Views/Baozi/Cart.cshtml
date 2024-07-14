@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Bao.Models.Cart>
+
+@{
+    ViewData["Title"] = "My Cart";
+}
+
+<h1 class="m-3">My Cart</h1>
+
+@if (Model != null && Model.Any())
+{
+    <form asp-action="Checkout" method="post" id="checkoutForm">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Product</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="selectedItems" value="@item.CartId" class="item-checkbox" data-price="@((item.Product?.Price ?? 0) * item.Quantity)" />
+                        </td>
+                        <td>@item.Product?.ProductName</td>
+                        <td>
+                            <img src="@(item.Product?.CoverImage != null ? $"data:{item.Product.ContentType};base64,{Convert.ToBase64String(item.Product.CoverImage)}" : "https://via.placeholder.com/100x100")" alt="@item.Product?.ProductName ?? " Image"" class="img-fluid" width="100" height="100">
+                        </td>
+                        <td>@(item.Product?.Price.ToString("C") ?? "$0.00")</td>
+                        <td>
+                            <form asp-action="Edit" method="post" class="d-inline-flex">
+                                <input type="hidden" name="id" value="@item.CartId" />
+                                <input type="number" name="quantity" value="@item.Quantity" min="1" class="form-control" style="width: 70px;" />
+                                <button type="submit" class="btn btn-primary btn-sm ml-2">Update</button>
+                            </form>
+                        </td>
+                        <td>@((item.Product?.Price ?? 0) * item.Quantity)</td>
+                        <td>
+                            <form asp-action="Delete" method="post" class="d-inline">
+                                <input type="hidden" name="id" value="@item.CartId" />
+                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-end">
+            <h4 id="totalPrice">Total: $0.00</h4>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-success">Checkout</button>
+        </div>
+    </form>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('.item-checkbox');
+            const totalPriceElement = document.getElementById('totalPrice');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateTotal);
+            });
+
+            function updateTotal() {
+                let total = 0;
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        total += parseFloat(checkbox.getAttribute('data-price'));
+                    }
+                });
+                totalPriceElement.innerText = 'Total: ' + total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+            }
+        });
+    </script>
+}

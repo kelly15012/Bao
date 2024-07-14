@@ -25,10 +25,12 @@
                 {
                     <p class="card-text mt-2">@Model.ProductDescription</p>
                 }
-                <p class="card-text"><strong>Quantity: </strong>@Model.Quantity</p>
+                <p class="card-text"><strong>Stock Available: </strong>@Model.Quantity</p>
                 <p class="card-text"><strong>Status: </strong>@(Model.Status ? "Available" : "Unavailable")</p>
-                <div class="d-flex justify-content-start mt-3">
-                    <button class="btn btn-dark">Add to cart</button>
+                <div class="d-flex flex-column mt-3">
+                    <label for="quantity" class="form-label"><strong>Quantity:</strong></label>
+                    <input type="number" id="quantity" class="form-control mb-3" min="1" max="@Model.Quantity" value="1" />
+                    <button id="addToCartBtn1" class="btn btn-dark mb-3">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -37,4 +39,27 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            $("#addToCartBtn1").click(function () {
+                var quantity = $("#quantity").val();
+                var productId = @Model.ProductId;
+
+                $.ajax({
+                    url: '@Url.Action("AddToCart1", "Product")',
+                    type: 'POST',
+                    data: {
+                        id: productId,
+                        quantity: quantity
+                    },
+                    success: function (result) {
+                        alert("Product added to cart");
+                    },
+                    error: function () {
+                        alert("Error adding product to cart");
+                    }
+                });
+            });
+        });
+    </script>
 }

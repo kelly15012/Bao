@@ -295,5 +295,45 @@ namespace Bao.Controllers.Admin
 
             return Ok();
         }
+
+        [HttpPost]
+        [Authorize(Roles = "Baozi")]
+        public async Task<IActionResult> AddToCart1(int id, int quantity)
+        {
+            // Get the current user
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var userId = user.Id;
+
+            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId && c.ProductId == id);
+            if (cart == null)
+            {
+                cart = new Cart
+                {
+                    UserId = userId,
+                    ProductId = id,
+                    Quantity = quantity
+                };
+                _context.Carts.Add(cart);
+            }
+            else
+            {
+                cart.Quantity += quantity;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }
