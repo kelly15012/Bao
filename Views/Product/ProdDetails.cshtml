@@ -1,0 +1,40 @@
+﻿@model Bao.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Image Section -->
+        <div class="col-md-6">
+            <div class="product-detail">
+                <img src="@(Model.CoverImage != null ? $"data:{Model.ContentType};base64,{Convert.ToBase64String(Model.CoverImage)}" : "https://via.placeholder.com/600x700")" alt="@Model.ProductName" class="img-fluid">
+            </div>
+        </div>
+        <!-- Product Information Section -->
+        <div class="col-md-6">
+            <div class="product-info">
+                <h1>@Model.ProductName</h1>
+                <p class="text-muted">SKU: @Model.ProductId</p>
+                <p>
+                    <span class="text-danger">@Model.Price.ToString("C")</span>
+                </p>
+                <span class="badge badge-pill badge-info">@Model.Category?.categoryName</span>
+                @if (!string.IsNullOrEmpty(Model.ProductDescription))
+                {
+                    <p class="card-text mt-2">@Model.ProductDescription</p>
+                }
+                <p class="card-text"><strong>Quantity: </strong>@Model.Quantity</p>
+                <p class="card-text"><strong>Status: </strong>@(Model.Status ? "Available" : "Unavailable")</p>
+                <div class="d-flex justify-content-start mt-3">
+                    <button class="btn btn-dark">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

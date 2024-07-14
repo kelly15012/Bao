@@ -23,31 +23,32 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark" href="#" id="staffManagementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Staff Management</a>
                             <ul class="dropdown-menu" aria-labelledby="staffManagementDropdown">
-                                <li><a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Register New Admin</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="StaffManagement" asp-action="ManageStaff">Manage Staff</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="StaffManagement" asp-action="SchduleStaff">Schdule Staff</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="ManageStaff">Manage Staff</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="SchduleStaff">Schdule Staff</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link text-dark" href="#" id="inventoryManagementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inventory Management</a>
+                            <ul class="dropdown-menu" aria-labelledby="inventoryManagementDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="Viewinventory">View Inventory</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="Updateinventory">Update Inventory </a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" id="orderManagementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Operations</a>
                             <ul class="dropdown-menu" aria-labelledby="orderManagementDropdown">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="OrderManagement" asp-action="ViewAllOrders">View All Orders</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="OrderManagement" asp-action="ResolveOrderIssues">Resolve Order Issues</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="MonitorOperations">Monitor Operations</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action=">HandleCustomerIssues">Handle Customer Issues</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="reportsAnalyticsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Relations</a>
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="PerformanceMonitoringDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Performance Monitoring</a>
                             <ul class="dropdown-menu" aria-labelledby="reportsAnalyticsDropdown">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="ReportsAnalytics" asp-action="GenerateReports">Generate Reports</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="ReportsAnalytics" asp-action="ViewAnalytics">View Analytics</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="ViewKPI">View KPI</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="" asp-action="GenerateReports">Generate Reports</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#" id="promotionsDiscountsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Performance Monitoring</a>
-                        </li>
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
