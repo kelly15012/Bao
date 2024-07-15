@@ -1,11 +1,11 @@
-﻿using Bao.Data;
+﻿using Bao.Areas.Identity.Data;
+using Bao.Data;
 using Bao.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Bao.Controllers.Admin
@@ -14,11 +14,13 @@ namespace Bao.Controllers.Admin
     {
         private readonly BaoContext _context;
         private readonly ILogger<ProductController> _logger;
+        private readonly UserManager<BaoUser> _userManager;
 
-        public ProductController(BaoContext context, ILogger<ProductController> logger)
+        public ProductController(BaoContext context, ILogger<ProductController> logger, UserManager<BaoUser> userManager)
         {
             _context = context;
             _logger = logger;
+            _userManager = userManager;
         }
 
         // GET: Product
@@ -252,6 +254,86 @@ namespace Bao.Controllers.Admin
         {
             var products = await _context.Products.Include(p => p.Category).ToListAsync();
             return View(products);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Baozi")]
+        public async Task<IActionResult> AddToCart(int id)
+        {
+            // Get the current user
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var userId = user.Id;
+
+            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId && c.ProductId == id);
+            if (cart == null)
+            {
+                cart = new Cart
+                {
+                    UserId = userId,
+                    ProductId = id,
+                    Quantity = 1
+                };
+                _context.Carts.Add(cart);
+            }
+            else
+            {
+                cart.Quantity++;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Baozi")]
+        public async Task<IActionResult> AddToCart1(int id, int quantity)
+        {
+            // Get the current user
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var userId = user.Id;
+
+            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId && c.ProductId == id);
+            if (cart == null)
+            {
+                cart = new Cart
+                {
+                    UserId = userId,
+                    ProductId = id,
+                    Quantity = quantity
+                };
+                _context.Carts.Add(cart);
+            }
+            else
+            {
+                cart.Quantity += quantity;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
         }
     }
 }

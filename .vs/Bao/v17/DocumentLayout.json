@@ -1,54 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\",
+  "WorkspaceRootPath": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\areas\\identity\\data\\baocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:areas\\identity\\data\\baocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\views\\product\\prodmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:views\\product\\prodmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\models\\promotions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:models\\promotions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\controllers\\admin\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:controllers\\admin\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\views\\product\\prodcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:views\\product\\prodcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\controllers\\admin\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:controllers\\admin\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\areas\\identity\\data\\baouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:areas\\identity\\data\\baouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\views\\baozi\\blanding.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:views\\baozi\\blanding.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\danny ho\\source\\repos\\bao\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|c:\\users\\kelly\\desktop\\apu\\y3s2\\cloud\\assignment\\bao\\views\\shared\\_managerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABAEBB1D-64FC-4F50-84D6-1FD0D24C76D4}|Bao.csproj|solutionrelative:views\\shared\\_managerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,154 +66,98 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdCreate.cshtml",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Product\\ProdCreate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\ProdCreate.cshtml",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Product\\ProdCreate.cshtml",
+              "RelativeToolTip": "Views\\Product\\ProdCreate.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-14T13:42:08.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Controllers\\Admin\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admin\\CartController.cs",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Controllers\\Admin\\CartController.cs*",
+              "RelativeToolTip": "Controllers\\Admin\\CartController.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T13:41:05.23Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BaoContext.cs",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Data\\BaoContext.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Data\\BaoContext.cs",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Data\\BaoContext.cs",
-              "RelativeToolTip": "Areas\\Identity\\Data\\BaoContext.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T18:22:05.376Z",
+              "Title": "ProdMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Product\\ProdMenu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\ProdMenu.cshtml",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Product\\ProdMenu.cshtml*",
+              "RelativeToolTip": "Views\\Product\\ProdMenu.cshtml*",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvyIAAABsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-14T13:37:19.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAApAAAA",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Controllers\\Admin\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admin\\ProductController.cs",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Controllers\\Admin\\ProductController.cs*",
+              "RelativeToolTip": "Controllers\\Admin\\ProductController.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T17:54:04.145Z"
+              "WhenOpened": "2024-07-14T13:00:56.157Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Promotions.cs",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Models\\Promotions.cs",
-              "RelativeDocumentMoniker": "Models\\Promotions.cs",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Models\\Promotions.cs",
-              "RelativeToolTip": "Models\\Promotions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwDwAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T17:52:18.745Z",
+              "WhenOpened": "2024-07-14T10:55:11.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BaoUser.cs",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Data\\BaoUser.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Data\\BaoUser.cs",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Data\\BaoUser.cs",
-              "RelativeToolTip": "Areas\\Identity\\Data\\BaoUser.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAIwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T17:45:06.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "bLanding.cshtml",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Views\\Baozi\\bLanding.cshtml",
-              "RelativeDocumentMoniker": "Views\\Baozi\\bLanding.cshtml",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Views\\Baozi\\bLanding.cshtml",
-              "RelativeToolTip": "Views\\Baozi\\bLanding.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAGAAAA",
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T17:10:48.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T17:03:38.636Z",
+              "WhenOpened": "2024-07-14T08:44:34.51Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T07:29:22.622Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAIwBcAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-10T14:46:26.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Title": "_ManagerLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Shared\\_ManagerLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ManagerLayout.cshtml",
+              "ToolTip": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Views\\Shared\\_ManagerLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ManagerLayout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAACLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T05:31:07.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T16:40:51.206Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T07:35:08.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\DANNY HO\\source\\repos\\Bao\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAANsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T05:38:44.583Z"
+              "WhenOpened": "2024-07-14T08:40:08.796Z",
+              "EditorCaption": ""
             }
           ]
         }

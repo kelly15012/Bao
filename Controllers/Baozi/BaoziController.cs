@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bao.Controllers
+namespace Bao.Controllers.Baozi
 {
     [Authorize(Roles = "Baozi")]
     public class BaoziController : Controller

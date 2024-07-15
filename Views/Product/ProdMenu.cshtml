@@ -15,7 +15,7 @@
                     <div class="card">
                         @if (product.CoverImage != null && product.ContentType != null)
                         {
-                            <img src="data:@product.ContentType;base64,@Convert.ToBase64String(product.CoverImage)" alt="Product Image" height="200" />
+                            <img src="data:@product.ContentType;base64,@Convert.ToBase64String(product.CoverImage)" alt="Product Image" height="300" />
                         }
                         else
                         {
@@ -30,8 +30,8 @@
                                 <p class="card-text">@product.ProductDescription</p>
                             }
                             <div class="d-flex justify-content-between">
-                                <a asp-action="#" class="btn btn-primary btn-sm">View Details</a>
-                                <a asp-action="#" class="btn btn-secondary text-dark btn-sm">Add to Cart</a>
+                                <a asp-action="ProdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="btn btn-primary btn-sm">View Details</a>
+                                <button class="btn btn-secondary text-dark btn-sm add-to-cart" data-id="@product.ProductId">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -47,5 +47,22 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            $(".add-to-cart").click(function () {
+                var productId = $(this).data("id");
+                $.ajax({
+                    url: '@Url.Action("AddToCart", "Product")',
+                    type: 'POST',
+                    data: { id: productId },
+                    success: function (result) {
+                        alert("Product added to cart");
+                    },
+                    error: function () {
+                        alert("Error adding product to cart");
+                    }
+                });
+            });
+        });
+    </script>
 }
-
