@@ -15,7 +15,7 @@
                     <div class="card">
                         @if (product.CoverImage != null && product.ContentType != null)
                         {
-                            <img src="data:@product.ContentType;base64,@Convert.ToBase64String(product.CoverImage)" alt="Product Image" height="200" />
+                            <img src="data:@product.ContentType;base64,@Convert.ToBase64String(product.CoverImage)" alt="Product Image" height="300" />
                         }
                         else
                         {
