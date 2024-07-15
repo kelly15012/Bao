@@ -20,5 +20,15 @@ namespace Bao.Controllers.Baozi
         {
             return View();
         }
+
+        public IActionResult Cart()
+        {
+            return View();
+        }
+
+        public IActionResult CheckOut(int id)
+        {
+            return View();
+        }
     }
 }
