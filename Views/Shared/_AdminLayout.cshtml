@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
-    <div class="d-flex flex-row" style="width: 100vw; height: 100vh;">
+    <div class="d-flex flex-row" style="height: 100vh;">
     <div>
     <header>
         <nav class="navbar d-flex flex-column justify-content-around">
@@ -48,7 +48,7 @@
                 </div>
             </div>
                     <div class="w-100 mt-5 px-4">
-                <partial name="_LoginPartial" />
+                <partial name="_amLoginPartial" />
             </div>
         </nav>
     </header>
@@ -64,7 +64,7 @@
         <footer class="border-top footer text-muted">
             <div class="container mt-2">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-5">
                         &copy; 2024 - Bao - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </div>
                     <div class="col-md-6 text-md-end">

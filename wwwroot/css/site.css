@@ -62,3 +62,76 @@ body {
     background-color: #cb8d95;
     border-radius: 20px;
 }
+
+.checkout-card {
+    border: none;
+    width: 100%;
+    transition: height 0.3s ease;
+}
+
+.checkout-card-body.payment-card-body {
+    transition: height 0.3s ease;
+}
+
+.checkout-card-header .btn {
+    display: flex;
+    width: 100%;
+}
+
+.checkout-card-header {
+    padding: .5rem 1rem !important;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: none;
+}
+
+.btn-light:focus {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+    box-shadow: 0 0 0 0.2rem rgba(216,217,219,.5);
+}
+
+.checkout-form-control {
+    height: 50px;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.checkout-form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #039be5;
+    outline: 0;
+    box-shadow: none;
+}
+
+.checkout-card-text {
+    font-size: 13px;
+    margin-left: 6px;
+}
+
+.payment-card-body {
+    flex: 1 1 auto;
+    padding: 24px 1rem !important;
+}
+
+.line {
+    color: #bfbdbd;
+}
+
+.checkout-input {
+    position: relative;
+}
+
+.checkout-input i {
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    color: #989898;
+}
+
+.checkout-input input {
+    text-indent: 30px;
+}
