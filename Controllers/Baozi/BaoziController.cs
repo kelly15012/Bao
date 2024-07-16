@@ -61,5 +61,10 @@ namespace Bao.Controllers.Baozi
             return Json(new { success = false, errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)) });
 
         }
+
+        public IActionResult FAQ()
+        {
+            return View();
+        }
     }
 }
