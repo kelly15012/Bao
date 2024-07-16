@@ -1,139 +1,48 @@
-﻿@{
-    ViewData["Title"] = "Payment Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model IEnumerable<Bao.Models.Cart>
+
+@{
+    ViewData["Title"] = "Checkout";
 }
 
-<div class="container d-flex justify-content-center mt-5 mb-5">
-    <div class="row g-4">
-        <div class="col-md-8">
-            <span>Payment Method</span>
-            <div class="checkout-card">
-                <div class="accordion" id="accordionExample">
-                    <div class="checkout-card">
-                        <div class="checkout-card-header p-0" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-light w-100 text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <span class="">Paypal</span>
-                                        <img src="https://i.imgur.com/7kQEsHU.png" width="30">
-                                    </div>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="card-body">
-                                <input type="text" class="checkout-form-control w-100" style="text-indent: 5px" placeholder="Paypal Email">
-                            </div>
-                        </div>
-                    </div>
+<h1 class="m-3">Checkout</h1>
 
-                    <div class="checkout-card">
-                        <div class="checkout-card-header p-0" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-light w-100 text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <span>Online Banking/E-Wallet</span>
-                                        <img src="https://vectorise.net/logo/wp-content/uploads/2019/09/Logo-FPX.png" width="30">
-                                    </div>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="card-body">     
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="bankingMethod" id="bankingMethod1" value="Method1">
-                                    <label class="form-check-label" for="bankingMethod1">Maybank / MAE</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="bankingMethod" id="bankingMethod2" value="Method2">
-                                    <label class="form-check-label" for="bankingMethod2">CIMB Bank</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="bankingMethod" id="bankingMethod3" value="Method3">
-                                    <label class="form-check-label" for="bankingMethod3">Hong Leong Bank</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="bankingMethod" id="bankingMethod4" value="Method4">
-                                    <label class="form-check-label" for="bankingMethod4">Touch N Go</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+@if (Model != null && Model.Any())
+{
+    <form asp-action="PlaceOrder" method="post">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Product?.ProductName</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.Product?.Price.ToString("C")</td>
+                        <td>@(item.Product?.Price * item.Quantity).ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-                    <div class="checkout-card">
-                        <div class="checkout-card-header p-0">
-                            <h2 class="mb-0">
-                                <button class="btn btn-light w-100 text-left p-3 rounded-0" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <span>Debit/Credit card</span>
-                                        <div class="icons">
-                                            <img src="https://i.imgur.com/2ISgYja.png" width="30">
-                                            <img src="https://i.imgur.com/W1vtnOV.png" width="30">
-                                            <img src="https://i.imgur.com/35tC99g.png" width="30">
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="card-body">
-                                <span class="font-weight-normal checkout-card-text">Card Number</span>
-                                <div class="checkout-input">
-                                    <i class="fa fa-credit-card"></i>
-                                    <input type="text" class="checkout-form-control w-100" placeholder="0000 0000 0000 0000">
-                                </div>
-
-                                <span class="font-weight-normal checkout-card-text">Expiry Date</span>
-                                <div class="checkout-input">
-                                    <i class="fa fa-calendar"></i>
-                                    <input type="text" class="checkout-form-control w-100" placeholder="MM/YY">
-                                </div>
-
-                                <span class="font-weight-normal checkout-card-text">CVC/CVV</span>
-                                <div class="checkout-input">
-                                    <i class="fa fa-lock"></i>
-                                    <input type="text" class="checkout-form-control w-100" placeholder="000">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="d-flex justify-content-end">
+            <h4>Total: @Model.Sum(item => (item.Product?.Price ?? 0) * item.Quantity).ToString("C")</h4>
         </div>
-
-        <div class="col-md-4">
-            <span>Summary</span>
-            <div class="checkout-card">
-                <div class="d-flex justify-content-between p-3">
-                    <div class="d-flex flex-column">
-                        <span>Amount</span>
-                    </div>
-                </div>
-                <hr class="mt-0 line">
-
-                <div class="p-3">
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>Delivery Fees</span>
-                        <span class="text-end"> *Get From Database* </span>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <span>Tax <i class="fa fa-clock-o"></i></span>
-                        <span class="text-end"> *Get From Database* </span>
-                    </div>
-                </div>
-                <hr class="mt-0 line">
-
-                <div class="p-3 d-flex justify-content-between">
-                    <div class="d-flex flex-column">
-                        <span>Total</span>
-                    </div>
-                    <span class="text-end"> *Calculation* </span>
-                </div>
-                <div class="p-3">
-                    <button class="btn btn-primary w-100 text-light">Pay</button>
-                </div>
-            </div>
+        <div class="d-flex justify-content-between mt-3">
+            <a asp-action="Cart" class="btn btn-secondary">Back to Cart</a>
+            <button type="submit" class="btn btn-success">Place Order</button>
         </div>
+    </form>
+}
+else
+{
+    <div class="container-fluid">
+        <p>No items to checkout.</p>
     </div>
-</div>
+}

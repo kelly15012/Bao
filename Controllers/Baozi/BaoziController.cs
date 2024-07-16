@@ -1,10 +1,8 @@
-﻿using Bao.Data;
-using Bao.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
-
+using Bao.Data;
+using Bao.Models;
 
 namespace Bao.Controllers.Baozi
 {
@@ -12,6 +10,7 @@ namespace Bao.Controllers.Baozi
     public class BaoziController : Controller
     {
         private readonly BaoContext _context;
+
         public BaoziController(BaoContext context)
         {
             _context = context;
@@ -37,7 +36,22 @@ namespace Bao.Controllers.Baozi
             return View();
         }
 
-        public IActionResult CheckOut(int id)
+        public IActionResult Checkout()
+        {
+            return View();
+        }
+
+        public IActionResult OrderConfirmation()
+        {
+            return View();
+        }
+
+        public IActionResult Order()
+        {
+            return View();
+        }
+
+        public IActionResult OrderDetails()
         {
             return View();
         }
@@ -60,6 +74,11 @@ namespace Bao.Controllers.Baozi
             }
             return Json(new { success = false, errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)) });
 
+        }
+
+        public IActionResult FAQ()
+        {
+            return View();
         }
     }
 }

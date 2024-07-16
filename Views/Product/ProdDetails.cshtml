@@ -55,11 +55,14 @@
                     success: function (result) {
                         alert("Product added to cart");
                     },
-                    error: function () {
-                        alert("Error adding product to cart");
+                    error: function (xhr) {
+                        console.log(xhr.responseText);
+                        alert(xhr.responseText || "Error adding product to cart");
                     }
                 });
             });
         });
     </script>
 }
+
+

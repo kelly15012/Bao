@@ -1,0 +1,40 @@
+﻿@model Bao.Models.Order
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2>Order #@Model.OrderId</h2>
+    <p>Date: @Model.OrderDate</p>
+    <p>Status: @Model.Status</p>
+    <p>Total Amount: @Model.TotalAmount.ToString("C")</p>
+
+    <h3>Order Items</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.OrderItems != null)
+            {
+                @foreach (var item in Model.OrderItems)
+                {
+                    <tr>
+                        <td>@item.Product?.ProductName</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.UnitPrice.ToString("C")</td>
+                        <td>@(item.Quantity * item.UnitPrice)</td>
+                    </tr>
+                }
+            }
+            
+        </tbody>
+    </table>
+</div>
