@@ -32,31 +32,14 @@ namespace Bao.Controllers.Baozi
             return View();
         }
 
-        public IActionResult FAQ()
+        public IActionResult Cart()
         {
             return View();
         }
 
-        public IActionResult ContactUs()
+        public IActionResult CheckOut(int id)
         {
             return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ContactUs(Contact contact)
-        {
-            if (ModelState.IsValid)
-            {
-
-                _context.Add(contact);
-                await _context.SaveChangesAsync();
-                return Json(new { success = true });
-            }
-            return Json(new { success = false, errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)) });
-            
         }
     }
-
-    
 }
