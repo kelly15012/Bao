@@ -1,0 +1,68 @@
+﻿@model Bao.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<div class="container mt-3 mb-3">
+<h1>Contact Us</h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+
+    <form asp-action="ContactUs" method="post" onsubmit="return submitForm(this);">
+        <div class="container m-1">
+            <div class="form-group mb-4">
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-4">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-4">
+                <label asp-for="Message"></label>
+                <textarea asp-for="Message" class="form-control"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+    </form>
+</div>
+<script>
+    function submitForm(form) {
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showThankYouAndRedirect();
+                } else {
+                    alert('There was an error. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error. Please try again.');
+            });
+
+        return false; // Prevent default form submission
+    }
+
+    function showThankYouAndRedirect() {
+        alert('Thank you for your feedback!');
+        window.location.href = '@Url.Action("bLanding", "Baozi")';
+    }
+</script>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

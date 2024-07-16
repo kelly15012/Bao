@@ -15,5 +15,10 @@ namespace Bao.Controllers.Manager
         {
             return View();
         }
+        public IActionResult ManageStaff() 
+        {
+            return View();
+        }
+
     }
 }
