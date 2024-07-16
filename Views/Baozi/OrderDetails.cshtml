@@ -50,7 +50,7 @@
                     <td>@item.Product?.ProductName</td>
                     <td>@item.Quantity</td>
                     <td>@item.UnitPrice.ToString("C")</td>
-                    <td>@(item.Quantity * item.UnitPrice).ToString("C")</td>
+                    <td>@(item.Quantity * item.UnitPrice)</td>
                 </tr>
             }
         }
@@ -58,4 +58,4 @@
     </tbody>
 </table>
 
-<a asp-action="Index" class="btn btn-secondary">Back to My Orders</a>
+<a asp-action="Index" class="btn btn-primary">Back to My Orders</a>

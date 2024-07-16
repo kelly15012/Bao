@@ -174,17 +174,20 @@ namespace Bao.Controllers.Baozi
             if (userId == null) return RedirectToAction("Cart", "Baozi");
 
             var order = await _context.Orders
+                                      .Include(o => o.OrderItems!)
+                                      .ThenInclude(oi => oi.Product!)
                                       .FirstOrDefaultAsync(o => o.OrderId == orderId && o.UserId == userId);
+
 
             if (order == null)
             {
                 return NotFound();
             }
 
+            order.Status = "Paid";
+
             // Here you would normally process the payment using a payment gateway API.
             // For the purpose of this example, we'll assume the payment is successful.
-
-            order.Status = "Paid";
 
             if (order.OrderItems == null)
             {
