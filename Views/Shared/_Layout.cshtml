@@ -53,7 +53,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Register New Admin</a>
                             </li>
-                            <li class="nav-item">
+                            @*<li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Inventory">Inventory Management</a>
                             </li>
                             <li class="nav-item">
@@ -61,9 +61,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="CustomerRelations">Customer Relations</a>
-                            </li>
+                            </li>*@
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="PerformanceMonitoring">Performance Monitoring</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Sales">Sales</a>
                             </li>
                         }
                         else if (User.IsInRole("Baozi"))
