@@ -21,7 +21,8 @@ public class BaoContext : IdentityDbContext<BaoUser>
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
     public DbSet<Promotion> Promotions { get; set; }
-
+    public DbSet<FAQ> FAQs { get; set; }
+    public DbSet<Contact> Contacts { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     { 
         base.OnModelCreating(builder);
