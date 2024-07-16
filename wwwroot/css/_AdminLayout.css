@@ -1,6 +1,6 @@
 ﻿body {
-    margin-bottom: 60px;
-    /*padding-top: 55px*/;
+    margin-bottom: 59px; 
+    /*set back to 60*/
 }
 
 :root {
@@ -65,7 +65,7 @@
 }
 
 .custom-toggler {
-    border-color: #ff6347; /* Change this to your desired color */
+    border-color: #ff6347;
 }
 
 .custom-toggler .navbar-toggler-icon {
