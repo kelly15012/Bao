@@ -17,155 +17,191 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bao
 build_property.RootNamespace = Bao
-build_property.ProjectDir = C:\Users\kelly\Desktop\APU\Y3S2\Cloud\Assignment\Bao\
+build_property.ProjectDir = D:\school\year3sem2\cloud computing\Bao\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kelly\Desktop\APU\Y3S2\Cloud\Assignment\Bao
+build_property.MSBuildProjectDirectory = D:\school\year3sem2\cloud computing\Bao
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/AdminRegister.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/AdminRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBZG1pblJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Admin/aLanding.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Admin/aLanding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYUxhbmRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Baozi/bLanding.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/bLanding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcYkxhbmRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Category/Create.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcQ2hlY2tPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcQ29udGFjdFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcRkFRLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/OrderConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcT3JkZXJDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/OrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcT3JkZXJEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Baozi/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFvemlcUGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Category/Edit.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Category/Index.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Home/Index.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Home/Privacy.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Manager/ManageStaff.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Manager/ManageStaff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxNYW5hZ2VTdGFmZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Manager/mLanding.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Manager/mLanding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxtTGFuZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Product/ProdCreate.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Manager/Sales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTYWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/school/year3sem2/cloud computing/Bao/Views/Product/ProdCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Product/ProdDetails.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Product/ProdDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Product/ProdEdit.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Product/ProdEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Product/ProdIndex.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Product/ProdIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Product/ProdMenu.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Product/ProdMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/Error.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/_AdminLayout.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/_amLoginPartial.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/_amLoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hbUxvZ2luUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/_LoginPartial.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/_ManagerLayout.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/_ManagerLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2VyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/_ViewImports.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/_ViewStart.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kelly/Desktop/APU/Y3S2/Cloud/Assignment/Bao/Views/Shared/_Layout.cshtml]
+[D:/school/year3sem2/cloud computing/Bao/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-79nlcrpfxa

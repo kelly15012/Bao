@@ -8862,19 +8862,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kelly\\.nuget\\packages\\": {}
+    "C:\\Users\\GIGA\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Bao.csproj",
+      "projectUniqueName": "D:\\school\\year3sem2\\cloud computing\\Bao\\Bao.csproj",
       "projectName": "Bao",
-      "projectPath": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\Bao.csproj",
-      "packagesPath": "C:\\Users\\kelly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kelly\\Desktop\\APU\\Y3S2\\Cloud\\Assignment\\Bao\\obj\\",
+      "projectPath": "D:\\school\\year3sem2\\cloud computing\\Bao\\Bao.csproj",
+      "packagesPath": "C:\\Users\\GIGA\\.nuget\\packages\\",
+      "outputPath": "D:\\school\\year3sem2\\cloud computing\\Bao\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GIGA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
