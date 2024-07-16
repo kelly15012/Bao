@@ -253,6 +253,20 @@ namespace Bao.Controllers.Admin
         public async Task<IActionResult> ProdMenu()
         {
             var products = await _context.Products.Include(p => p.Category).ToListAsync();
+            // Check and update the status of each product
+            foreach (var product in products)
+            {
+                if (product.Quantity <= 0)
+                {
+                    product.Status = false;
+                }
+                else
+                {
+                    product.Status = true;
+                }
+            }
+            // Save the changes to the database
+            await _context.SaveChangesAsync();
             return View(products);
         }
 
@@ -270,9 +284,9 @@ namespace Bao.Controllers.Admin
             var userId = user.Id;
 
             var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
-            if (product == null)
+            if (product == null || !product.Status)
             {
-                return NotFound();
+                return BadRequest("Product is unavailable.");
             }
 
             var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId && c.ProductId == id);
@@ -310,12 +324,23 @@ namespace Bao.Controllers.Admin
             var userId = user.Id;
 
             var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
-            if (product == null)
+            if (product == null || !product.Status)
             {
-                return NotFound();
+                return BadRequest("Product is unavailable.");
             }
 
             var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId && c.ProductId == id);
+
+            // Check if there is enough quantity available
+            if (cart != null && (cart.Quantity + quantity) > product.Quantity)
+            {
+                return BadRequest("Cannot add quantity more than the available quantity.");
+            }
+            else if (cart == null && quantity > product.Quantity)
+            {
+                return BadRequest("Cannot add quantity more than the available quantity.");
+            }
+
             if (cart == null)
             {
                 cart = new Cart

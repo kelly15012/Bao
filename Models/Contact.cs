@@ -1,23 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Bao.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bao.Models
 {
     public class Contact
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        
-        [Required]
-        [StringLength(100)]
-        public string UserName { get; set; }
 
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        [ForeignKey("BaoUser")]
+        public string? UserId { get; set; }
 
-        
+        // Navigation properties
+        public virtual BaoUser? User { get; set; }
 
         [Required]
         [StringLength(1000)]
-        public string Message { get; set; }
+        public required string Message { get; set; }
     }
 }

@@ -213,57 +213,6 @@ namespace Bao.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("Bao.Models.FAQ", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Question")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FAQs");
-                });
-
-            modelBuilder.Entity("Bao.Models.LoyaltyPoint", b =>
-                {
-                    b.Property<int>("LoyaltyPointId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LoyaltyPointId"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<DateTime>("EarnedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Points")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("LoyaltyPointId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("LoyaltyPoints");
-                });
-
             modelBuilder.Entity("Bao.Models.Order", b =>
                 {
                     b.Property<int>("OrderId")
@@ -369,35 +318,6 @@ namespace Bao.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("Bao.Models.Promotion", b =>
-                {
-                    b.Property<int>("PromotionId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PromotionId"));
-
-                    b.Property<decimal>("DiscountPercentage")
-                        .HasColumnType("decimal(10, 2)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("PromotionId");
-
-                    b.ToTable("Promotions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -552,17 +472,6 @@ namespace Bao.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Bao.Models.LoyaltyPoint", b =>
-                {
-                    b.HasOne("Bao.Areas.Identity.Data.BaoUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("User");
                 });
