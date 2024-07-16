@@ -8,16 +8,14 @@ namespace Bao.Models
         
         [Required]
         [StringLength(100)]
-        public string UserName { get; set; }
+        public required string UserName { get; set; }
 
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
-
-        
+        public required string Email { get; set; }
 
         [Required]
         [StringLength(1000)]
-        public string Message { get; set; }
+        public required string Message { get; set; }
     }
 }
