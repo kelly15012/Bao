@@ -60,5 +60,7 @@ namespace Bao.Areas.Identity.Data
 
         // Navigation properties
         public virtual ICollection<Order>? Orders { get; set; }
+
+        public virtual ICollection<Contact>? Contacts { get; set; }
     }
 }

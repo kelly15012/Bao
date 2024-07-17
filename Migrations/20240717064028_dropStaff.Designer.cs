@@ -4,6 +4,7 @@ using Bao.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bao.Migrations
 {
     [DbContext(typeof(BaoContext))]
-    partial class BaoContextModelSnapshot : ModelSnapshot
+    [Migration("20240717064028_dropStaff")]
+    partial class dropStaff
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,29 +187,6 @@ namespace Bao.Migrations
                     b.HasKey("categoryId");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("Bao.Models.Contact", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("Bao.Models.Order", b =>
@@ -472,15 +452,6 @@ namespace Bao.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Bao.Models.Contact", b =>
-                {
-                    b.HasOne("Bao.Areas.Identity.Data.BaoUser", "User")
-                        .WithMany("Contacts")
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Bao.Models.Order", b =>
                 {
                     b.HasOne("Bao.Areas.Identity.Data.BaoUser", "User")
@@ -573,8 +544,6 @@ namespace Bao.Migrations
 
             modelBuilder.Entity("Bao.Areas.Identity.Data.BaoUser", b =>
                 {
-                    b.Navigation("Contacts");
-
                     b.Navigation("Orders");
                 });
 
