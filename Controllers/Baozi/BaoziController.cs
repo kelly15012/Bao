@@ -54,5 +54,10 @@ namespace Bao.Controllers.Baozi
         {
             return View();
         }
+
+        public IActionResult SalesReport()
+        {
+            return View();
+        }
     }
 }
