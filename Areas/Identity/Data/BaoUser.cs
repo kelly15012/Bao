@@ -20,7 +20,7 @@ namespace Bao.Areas.Identity.Data
         public string FullName { get { return LastName + " " + FirstName; } }
 
         [PersonalData]
-        [StringLength(10)]
+        [StringLength(20)]
         public string? Gender { get; set; }
 
         [PersonalData]

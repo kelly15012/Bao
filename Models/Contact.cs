@@ -8,7 +8,7 @@ namespace Bao.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int ContactId { get; set; }
 
         [ForeignKey("BaoUser")]
         public string? UserId { get; set; }

@@ -26,7 +26,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="AdminUserManagement" asp-action="UserIndex">Users Management</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="ProdIndex">Product Management</a>
@@ -35,12 +35,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Category Management</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="OrderManagement">Order Management</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="OrderIndex">Order Management</a>
                         </li>
                     }
                     else if (User.IsInRole("Manager"))
                     {
-                        <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding">Manager</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding" style="padding-left: 1rem;">Manager</a>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="mLanding">Dashboard</a>
                         </li>
@@ -48,7 +48,7 @@
                             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Manage Staff</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ScheduleStaff">Schedule Staff</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ScheduleStaff">Admin Management</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="SalesReport">Sales Report</a>
