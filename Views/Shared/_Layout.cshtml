@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Bao</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/_Layout.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/_AdminLayout.css" asp-append-version="true">
     <link rel="stylesheet" href="~/Bao.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <!-- Favicon: The icon on the tab -->
@@ -42,16 +42,16 @@
                     {
                         <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding">Manager</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Index">Dashboard</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="mLanding">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ManageStaff">Manage Staff</a>
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Manage Staff</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ScheduleStaff">Schedule Staff</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="SalesReport">Sales Report</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="SalesReport">Sales Report</a>
                         </li>
                         
                     }
