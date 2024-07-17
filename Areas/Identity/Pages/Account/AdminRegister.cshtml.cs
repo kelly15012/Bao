@@ -45,12 +45,14 @@ namespace Bao.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _context = context;
+            ExternalLogins = new List<AuthenticationScheme>();
+            Input = new InputModel();
         }
 
         [BindProperty]
         public InputModel Input { get; set; }
 
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
@@ -59,30 +61,30 @@ namespace Bao.Areas.Identity.Pages.Account
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
-            public required string Email { get; set; }
+            public string Email { get; set; } = string.Empty;
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at most {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
-            public required string Password { get; set; }
+            public string Password { get; set; } = string.Empty;
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-            public required string ConfirmPassword { get; set; }
+            public string ConfirmPassword { get; set; } = string.Empty;
 
             [Required]
             [Display(Name = "First Name")]
-            public required string FirstName { get; set; }
+            public string FirstName { get; set; } = string.Empty;
 
             [Required]
             [Display(Name = "Last Name")]
-            public required string LastName { get; set; }
+            public string LastName { get; set; } = string.Empty;
 
             [Required]
             [Display(Name = "Gender")]
-            public required string Gender { get; set; }
+            public string Gender { get; set; } = string.Empty;
 
             [Required]
             [DataType(DataType.Date)]
@@ -90,13 +92,13 @@ namespace Bao.Areas.Identity.Pages.Account
             public DateTime DateOfBirth { get; set; }
         }
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync(string? returnUrl = null)
         {
-            ReturnUrl = returnUrl;
+            ReturnUrl = returnUrl ?? string.Empty;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
