@@ -1,0 +1,46 @@
+﻿@model Bao.Models.SalesReportViewModel
+
+@{
+    ViewData["Title"] = "Product Sales Report";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="get" asp-action="ProductSalesReport">
+    <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" value="@Model.StartDate.ToString("yyyy-MM-dd")" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" value="@Model.EndDate.ToString("yyyy-MM-dd")" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2 mb-3">Filter</button>
+</form>
+
+<p>
+    <a href="@Url.Action("SalesReport", new { startDate = Model.StartDate, endDate = Model.EndDate })" class="btn btn-secondary text-dark">Back to Sales Report</a>
+    <a href="@Url.Action("ExportProductSalesReportToPdf", new { startDate = Model.StartDate, endDate = Model.EndDate })" class="btn btn-primary">Export to PDF</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Total Quantity</th>
+            <th>Total Sales</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ProductSalesData)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.TotalQuantity</td>
+                <td>@item.TotalSales.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>Total Sales: @Model.TotalSales.ToString("C")</p>
