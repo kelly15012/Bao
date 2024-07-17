@@ -7,27 +7,26 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Bao.Controllers
+namespace Bao.Controllers.Manager
 {
-    [Authorize(Roles = "Admin")]
-    public class AdminUserManagementController : Controller
+    public class ManagerAdminManagementController : Controller
     {
         private readonly BaoContext _context;
         private readonly UserManager<BaoUser> _userManager;
 
-        public AdminUserManagementController(BaoContext context, UserManager<BaoUser> userManager)
+        public ManagerAdminManagementController(BaoContext context, UserManager<BaoUser> userManager)
         {
             _context = context;
             _userManager = userManager;
         }
 
-        // GET: AdminUserManagement/UserIndex
-        public async Task<IActionResult> UserIndex()
+        // GET: ManagerAdminManagement/AdminIndex
+        public async Task<IActionResult> AdminIndex()
         {
-            var role = await _context.Roles.FirstOrDefaultAsync(r => r.Name == "Baozi");
+            var role = await _context.Roles.FirstOrDefaultAsync(r => r.Name == "Admin");
             if (role == null)
             {
-                return NotFound("Role Baozi not found.");
+                return NotFound("Role Admin not found.");
             }
 
             var usersInRole = await _context.UserRoles
@@ -39,10 +38,10 @@ namespace Bao.Controllers
                 .Where(u => usersInRole.Contains(u.Id))
                 .ToListAsync();
 
-            return View("~/Views/Admin/userIndex.cshtml", users);
+            return View("~/Views/Manager/adminIndex.cshtml", users);
         }
 
-        // GET: AdminUserManagement/Edit
+        // GET: ManagerAdminManagement/Edit
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -56,10 +55,10 @@ namespace Bao.Controllers
                 return NotFound();
             }
 
-            return View("~/Views/Admin/userEdit.cshtml", user);
+            return View("~/Views/Manager/adminEdit.cshtml", user);
         }
 
-        // POST: AdminUserManagement/Edit
+        // POST: ManagerAdminManagement/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("Id,FirstName,LastName,Gender,DateOfBirth")] BaoUser user)
@@ -98,12 +97,12 @@ namespace Bao.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(UserIndex));
+                return RedirectToAction(nameof(AdminIndex));
             }
-            return View("~/Views/Admin/userEdit.cshtml", user);
+            return View("~/Views/Manager/adminEdit.cshtml", user);
         }
 
-        // GET: AdminUserManagement/Delete
+        // GET: ManagerAdminManagement/Delete
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -118,10 +117,10 @@ namespace Bao.Controllers
                 return NotFound();
             }
 
-            return View("~/Views/Admin/userDelete.cshtml", user);
+            return View("~/Views/Manager/adminDelete.cshtml", user);
         }
 
-        // POST: AdminUserManagement/Delete
+        // POST: ManagerAdminManagement/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
@@ -132,7 +131,7 @@ namespace Bao.Controllers
                 _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
             }
-            return RedirectToAction(nameof(UserIndex));
+            return RedirectToAction(nameof(AdminIndex));
         }
 
         private bool UserExists(string id)
