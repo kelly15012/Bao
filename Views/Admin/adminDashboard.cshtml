@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<!-- Other dashboard content -->
+
+<h3>Order Chart for the Last Three Days</h3>
+<canvas id="orderChart" width="400" height="200"></canvas>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('/api/orders/last-three-days')
+                .then(response => response.json())
+                .then(data => {
+                    var ctx = document.getElementById('orderChart').getContext('2d');
+                    var chartData = {
+                        labels: data.map(order => new Date(order.date).toLocaleDateString()),
+                        datasets: [{
+                            label: 'Total Amount',
+                            data: data.map(order => order.totalAmount),
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    };
+                    var orderChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: chartData,
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+        });
+    </script>
+}
