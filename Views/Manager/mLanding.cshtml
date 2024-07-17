@@ -52,41 +52,18 @@
             </div>
             <p class="container-custom justify-content-center">This section is for manage and schedule all the staff.</p>
             <div class="container-custom d-flex align-items-sm-center">
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Manage</a>
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Schedule</a>
-            </div>
-        </div>
-        <div class=".col-6 col mb-4">
-            <div class="card bg-secondary text-dark">
-                <h6 class="card-title-custom">Inventory Management</h6>
-            </div>
-            <p class="container-custom justify-content-center">This section is for you to view and manage the inventory of the products.</p>
-            <div class="container-custom d-flex align-items-sm-center">
+                <a class="btn btn-secondary-custom" asp-area="Identity" asp-page="/Account/AdminRegister">Add</a>
                 <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">View</a>
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Manage</a>
-            </div>
-        </div>
-        
-    </div>
-    <div class="row justify-content-start">
-        <div class=".col-6 col mb-4">
-            <div class="card bg-secondary text-dark">
-                <h6 class="card-title-custom">Operations and Customer Relations</h6>
-            </div>
-            <p class="btn-container-custom justify-content-center">This section is for you to monitor operations and handle customer issues.</p>
-            <div class="container-custom d-flex align-items-sm-center">
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Monitor Operations</a>
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Handle Customer Issues</a>
             </div>
         </div>
         <div class=".col-6 col mb-4">
             <div class="card bg-secondary text-dark">
-                <h6 class="card-title-custom">Performance Monitoring</h6>
+                <h6 class="card-title-custom">Reports</h6>
             </div>
-            <p class="container-custom justify-content-center">This section is for you to view KPI and generate reports.</p>
+            <p class="container-custom justify-content-center">This section is for you to view and generate reports.</p>
             <div class="container-custom d-flex align-items-sm-center">
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">View</a>
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">Generate</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="ReportView" asp-action="SalesReport">View Total Sales</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="ReportView" asp-action="ProductSalesReport">View Product Sales</a>
             </div>
         </div>
     </div>
