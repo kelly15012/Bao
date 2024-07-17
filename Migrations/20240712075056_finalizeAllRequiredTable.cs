@@ -40,28 +40,6 @@ namespace Bao.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "LoyaltyPoints",
-                columns: table => new
-                {
-                    LoyaltyPointId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Points = table.Column<int>(type: "int", nullable: false),
-                    EarnedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_LoyaltyPoints", x => x.LoyaltyPointId);
-                    table.ForeignKey(
-                        name: "FK_LoyaltyPoints_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
                 {
@@ -82,22 +60,6 @@ namespace Bao.Migrations
                         principalColumn: "Id");
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Promotions",
-                columns: table => new
-                {
-                    PromotionId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DiscountPercentage = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Promotions", x => x.PromotionId);
-                });
 
             migrationBuilder.CreateTable(
                 name: "OrderItems",
@@ -138,11 +100,6 @@ namespace Bao.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LoyaltyPoints_UserId",
-                table: "LoyaltyPoints",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
                 column: "OrderId");
@@ -164,14 +121,10 @@ namespace Bao.Migrations
             migrationBuilder.DropTable(
                 name: "Carts");
 
-            migrationBuilder.DropTable(
-                name: "LoyaltyPoints");
 
             migrationBuilder.DropTable(
                 name: "OrderItems");
 
-            migrationBuilder.DropTable(
-                name: "Promotions");
 
             migrationBuilder.DropTable(
                 name: "Orders");
