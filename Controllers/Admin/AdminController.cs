@@ -40,7 +40,7 @@ namespace Bao.Controllers.Admin
         {
             var categorySales = await _context.OrderItems
                                               .Include(oi => oi.Product)
-                                              .ThenInclude(p => p.Category)
+                                              .ThenInclude(p => p!.Category)
                                               .GroupBy(oi => oi.Product!.Category!.categoryName)
                                               .Select(g => new
                                               {

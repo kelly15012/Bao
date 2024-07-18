@@ -17,7 +17,11 @@ namespace Bao.Controllers.Manager
             return View();
         }
 
-        
+        public IActionResult ContactUsManagement()
+        {
+            return View();
+        }
+
         private readonly BaoContext _context;
 
         public ManagerController(BaoContext context)

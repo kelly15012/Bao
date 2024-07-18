@@ -43,10 +43,13 @@
                     {
                         <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding" style="padding-left: 1rem;">Manager</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Manage Admin</a>
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Staff Registration</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ManagerAdminManagement" asp-action="AdminIndex">Admin Management</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ManagerAdminManagement" asp-action="AdminIndex">Staff Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ContactUsManagement">Feedback Management</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="SalesReport">Sales Report</a>
@@ -54,7 +57,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="ProductSalesReport">Product Report</a>
                         </li>
-                        
                     }
                 </ul>
                 <div style="padding-top: 5rem">
