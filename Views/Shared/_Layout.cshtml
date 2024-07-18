@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/css/_AdminLayout.css" asp-append-version="true">
     <link rel="stylesheet" href="~/Bao.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Favicon: The icon on the tab -->
     <link rel="icon" type="image/png" href="~/image/dumpling.png">
 </head>
@@ -23,7 +24,7 @@
                     {
                         <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="aLanding" style="padding-left: 1rem;">Admin</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Dashboard</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="adminDashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="AdminUserManagement" asp-action="UserIndex">Users Management</a>
@@ -35,7 +36,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Category Management</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="OrderIndex">Order Management</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="OrderManagement" asp-action="OrderIndex">Order Management</a>
                         </li>
                     }
                     else if (User.IsInRole("Manager"))
