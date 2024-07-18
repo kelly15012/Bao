@@ -1,7 +1,9 @@
-﻿@{
+﻿@model Bao.Models.Dashboard
+@{
     ViewData["Title"] = "Manager Landing Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 
 <div class=" bg-secondary container-fluid">
@@ -15,7 +17,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Total Users: </h6>
                         @* fetch data from database *@
-                        <h2 class="card-text-custom">1,234</h2>
+                        <h2 id="totalUsers" class="card-text-custom">@Model.TotalUsers</h2>
                     </div>
                 </div>
             </div>
@@ -23,20 +25,12 @@
                 <div class="card bg-primary text-white">
                     <div class="card-body">
                         <h6 class="card-title">Total Orders of the day: </h6>
+                        <h2 id="totalOrdersToday" class="card-text-custom">@Model.TotalOrdersToday</h2>
                         @* fetch data from database *@
-                        <h2 class="card-text-custom">567</h2>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card bg-primary text-white">
-                    <div class="card-body">
-                        <h6 class="card-title">Campaigns Ongoing: </h6>
-                        @* fetch data from database *@
-                        <h2 class="card-text-custom">3</h2>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -53,7 +47,7 @@
             <p class="container-custom justify-content-center">This section is for manage and schedule all the staff.</p>
             <div class="container-custom d-flex align-items-sm-center">
                 <a class="btn btn-secondary-custom" asp-area="Identity" asp-page="/Account/AdminRegister">Add</a>
-                <a class="btn btn-secondary-custom" asp-area="" asp-controller="" asp-action="">View</a>
+                <a class="btn btn-secondary-custom" asp-area="" asp-controller="ManagerAdminManagement" asp-action="AdminIndex">View</a>
             </div>
         </div>
         <div class=".col-6 col mb-4">
@@ -68,3 +62,20 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: '@Url.Action("GetDashboardData", "Manager")',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#totalUsers').text(data.TotalUsers);
+                $('#totalOrdersToday').text(data.TotalOrdersToday);
+            },
+            error: function () {
+                $('#totalUsers').text('Error');
+                $('#totalOrdersToday').text('Error');
+            }
+        });
+    });
+</script>

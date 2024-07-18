@@ -22,7 +22,7 @@
                 <ul class="nav flex-column">
                     @if (User.IsInRole("Admin"))
                     {
-                        <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="aLanding" style="padding-left: 1rem;">Admin</a>
+                        <a class="navbar-brand ms-2" asp-area="" asp-controller="Admin" asp-action="aLanding" style="padding-left: 1rem;">Admin</a>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="adminDashboard">Dashboard</a>
                         </li>
@@ -53,6 +53,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="SalesReport">Sales Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="ProductSalesReport">Product Report</a>
                         </li>
                         
                     }

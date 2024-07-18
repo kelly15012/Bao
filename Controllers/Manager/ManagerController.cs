@@ -1,5 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Bao.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Bao.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Bao.Controllers.Manager
 {
@@ -11,9 +17,30 @@ namespace Bao.Controllers.Manager
             return View();
         }
 
-        public IActionResult mLanding()
+        
+        private readonly BaoContext _context;
+
+        public ManagerController(BaoContext context)
         {
-            return View();
+            _context = context;
         }
+        [HttpGet]
+        public async Task<IActionResult> mLanding()
+        {
+            var totalUsers = await _context.Users.CountAsync();
+            var totalOrdersToday = await _context.Orders
+                .Where(o => o.OrderDate.Date == DateTime.Today)
+                .CountAsync();
+
+            var Model = new Dashboard
+            {
+                TotalUsers = totalUsers,
+                TotalOrdersToday = totalOrdersToday
+            };
+            ViewBag.Title = "Manager Landing Page";
+            return View(Model);
+        }
+
+        
     }
 }

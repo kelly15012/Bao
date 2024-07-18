@@ -58,16 +58,29 @@ namespace Bao.Controllers.Admin
             return View("~/Views/Admin/adminDashboard.cshtml");
         }
 
-        [HttpGet("landing")]
-        public IActionResult ALanding()
-        {
-            return View("~/Views/Admin/aLanding.cshtml");
-        }
-
         [HttpGet("index")]
         public IActionResult Index()
         {
             return View("~/Views/Admin/Index.cshtml");
+        }
+
+        [HttpGet("landing")]
+        public async Task<IActionResult> aLanding()
+        {
+            var totalProducts = await _context.Products.CountAsync();
+            var totalCategory = await _context.Categories.CountAsync();
+            var totalOrdersToday = await _context.Orders
+                .Where(o => o.OrderDate.Date == DateTime.Today)
+                .CountAsync();
+
+            var Model = new Dashboard
+            {
+                TotalProducts = totalProducts,
+                TotalCategory = totalCategory,
+                TotalOrdersToday = totalOrdersToday
+            };
+            ViewBag.Title = "Admin Landing Page";
+            return View(Model);
         }
     }
 }
