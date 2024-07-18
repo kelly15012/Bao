@@ -1,17 +1,17 @@
 ﻿@model Bao.Models.Order
 
 @{
-    ViewData["Title"] = "Check Out";
+    ViewData["Title"] = "Payment";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container d-flex justify-content-center mt-5 mb-5">
     <div class="row g-3">
-        <div class="col-md-6">
+        <div class="col-8 w-100">
             <span>Payment Method</span>
             <div class="checkout-card">
                 <div class="accordion" id="accordionExample">
-                    <div class="checkout-card">
+                    <div class="checkout-card w-100">
                         <div class="checkout-card-header p-0" id="headingTwo">
                             <h2 class="mb-0">
                                 <button class="btn btn-light w-100 text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -24,7 +24,7 @@
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="card-body">
-                                <input type="text" class="checkout-form-control" placeholder="Paypal email">
+                                <input type="text" class="checkout-form-control w-100" placeholder="Paypal email">
                             </div>
                         </div>
                     </div>
@@ -85,24 +85,17 @@
                                 <span class="font-weight-normal checkout-card-text">Card Number</span>
                                 <div class="checkout-input">
                                     <i class="fa fa-credit-card"></i>
-                                    <input type="text" class="checkout-form-control" placeholder="0000 0000 0000 0000">
+                                    <input type="text" class="checkout-form-control w-100" placeholder="0000 0000 0000 0000">
+                                </div>                                   
+                                <span class="font-weight-normal checkout-card-text">Expiry Date</span>
+                                <div class="checkout-input">
+                                    <i class="fa fa-calendar"></i>
+                                    <input type="text" class="checkout-form-control w-100" placeholder="MM/YY">
                                 </div>
-
-                                <div class="row mt-3 mb-3">
-                                    <div class="col-md-6">
-                                        <span class="font-weight-normal checkout-card-text">Expiry Date</span>
-                                        <div class="checkout-input">
-                                            <i class="fa fa-calendar"></i>
-                                            <input type="text" class="checkout-form-control" placeholder="MM/YY">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <span class="font-weight-normal checkout-card-text">CVC/CVV</span>
-                                        <div class="checkout-input">
-                                            <i class="fa fa-lock"></i>
-                                            <input type="text" class="checkout-form-control" placeholder="000">
-                                        </div>
-                                    </div>
+                                <span class="font-weight-normal checkout-card-text">CVC/CVV</span>
+                                <div class="checkout-input">
+                                    <i class="fa fa-lock"></i>
+                                    <input type="text" class="checkout-form-control w-100" placeholder="000">
                                 </div>
                             </div>
                         </div>
@@ -110,8 +103,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-6">
+        <div class="col-4">
             <span>Summary</span>
             <div class="checkout-card">
                 <div class="d-flex justify-content-between p-3">

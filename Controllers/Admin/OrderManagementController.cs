@@ -17,13 +17,6 @@ namespace Bao.Controllers.Admin
             _context = context;
         }
 
-        // GET: Category
-        public async Task<IActionResult> Index()
-        {
-            List<Order> orders = await _context.Orders.ToListAsync();
-            return View(orders);
-        }
-
         // GET: Admin/Orders
         public async Task<IActionResult> OrderIndex()
         {
@@ -35,7 +28,7 @@ namespace Bao.Controllers.Admin
             return View("~/Views/Admin/OrderIndex.cshtml", orders);
         }
 
-        // GET: Admin/Orders/Edit/5
+        // GET: Admin/Orders/Edit
         public async Task<IActionResult> Edit(int id)
         {
             var order = await _context.Orders.FindAsync(id);
@@ -47,20 +40,41 @@ namespace Bao.Controllers.Admin
             return View("~/Views/Admin/EditOrder.cshtml", order);
         }
 
-        // POST: Admin/Orders/Edit/5
+        // POST: Admin/Orders/Edit
         [HttpPost]
-        public async Task<IActionResult> EditOrder(Order order)
+        public async Task<IActionResult> Edit(int id, [Bind("OrderId,Status")] Order order)
         {
+            if (id != order.OrderId)
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
-                var existingOrder = await _context.Orders.FindAsync(order.OrderId);
-                if (existingOrder == null)
+                try
                 {
-                    return NotFound();
-                }
+                    var orderInDb = await _context.Orders.FindAsync(id);
+                    if (orderInDb == null)
+                    {
+                        return NotFound();
+                    }
 
-                existingOrder.Status = order.Status;
-                await _context.SaveChangesAsync();
+                    orderInDb.Status = order.Status;
+
+                    _context.Update(orderInDb);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!OrderExists(order.OrderId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
                 return RedirectToAction(nameof(OrderIndex));
             }
             return View("~/Views/Admin/EditOrder.cshtml", order);
@@ -108,6 +122,11 @@ namespace Bao.Controllers.Admin
             }
 
             return View("~/Views/Admin/OrderDetails.cshtml", order);
+        }
+
+        private bool OrderExists(int id)
+        {
+            return _context.Orders.Any(e => e.OrderId == id);
         }
     }
 }
