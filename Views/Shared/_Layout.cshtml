@@ -22,7 +22,7 @@
                 <ul class="nav flex-column">
                     @if (User.IsInRole("Admin"))
                     {
-                        <a class="navbar-brand ms-2" asp-area="" asp-controller="Admin" asp-action="aLanding" style="padding-left: 1rem;">Admin</a>
+                        <a class="navbar-brand ms-2" asp-area="" asp-controller="Admin" asp-action="aLanding" style="padding-left: 0.5rem;">Admin</a>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="adminDashboard">Dashboard</a>
                         </li>
@@ -43,10 +43,7 @@
                     {
                         <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding" style="padding-left: 1rem;">Manager</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="mLanding">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Manage Staff</a>
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Manage Admin</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ManagerAdminManagement" asp-action="AdminIndex">Admin Management</a>
