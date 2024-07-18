@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Bao</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/_Layout.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/_AdminLayout.css" asp-append-version="true">
     <link rel="stylesheet" href="~/Bao.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Favicon: The icon on the tab -->
     <link rel="icon" type="image/png" href="~/image/dumpling.png">
 </head>
@@ -23,10 +24,10 @@
                     {
                         <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="aLanding" style="padding-left: 1rem;">Admin</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Dashboard</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="adminDashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="ManageUsers">Manage Users</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="AdminUserManagement" asp-action="UserIndex">Users Management</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="ProdIndex">Product Management</a>
@@ -40,15 +41,15 @@
                     }
                     else if (User.IsInRole("Manager"))
                     {
-                        <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding">Manager</a>
+                        <a class="navbar-brand" asp-area="" asp-controller="Manager" asp-action="mLanding" style="padding-left: 1rem;">Manager</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Index">Dashboard</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="mLanding">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ManageStaff">Manage Staff</a>
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/AdminRegister">Manage Staff</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="ScheduleStaff">Schedule Staff</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ManagerAdminManagement" asp-action="AdminIndex">Admin Management</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ReportView" asp-action="SalesReport">Sales Report</a>
