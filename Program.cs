@@ -48,12 +48,16 @@ namespace Bao
 
             using (var scope = app.Services.CreateScope())
             {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+                await SeedRoles(roleManager);
+
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<BaoUser>>();
 
                 string email = "manager@bao.com";
                 string password = "Manager@1234";
 
-                if (await userManager.FindByEmailAsync(email) == null)
+                // Ensure the user is created only after roles have been seeded
+                if (await userManager.FindByEmailAsync(email) == null) //error shown here
                 {
                     var user = new BaoUser { UserName = email, Email = email };
                     //user.EmailConfirmed = true;
@@ -61,13 +65,12 @@ namespace Bao
                     await userManager.AddToRoleAsync(user, "Manager");
                 }
             }
-
             // Seed roles
-            using (var scope = app.Services.CreateScope())
-            {
-                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-                await SeedRoles(roleManager);
-            }
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            //    await SeedRoles(roleManager);
+            //}
 
             app.Run();
         }
