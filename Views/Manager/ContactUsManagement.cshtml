@@ -1,4 +1,4 @@
-﻿@model List<Contact>
+﻿@model List<Bao.Models.Contact>
 
 @{
     ViewData["Title"] = "Feedback Management";
@@ -17,7 +17,7 @@ else
         <thead>
             <tr>
                 <th>Contact ID</th>
-                <th>User</th>
+                <th>UserID</th>
                 <th>Message</th>
                 <th>Status</th>
                 <th>Actions</th>
@@ -28,8 +28,9 @@ else
             {
                 <tr>
                     <td>@contact.ContactId</td>
+                    <td>@contact.UserId</td>
                     <td>@contact.Message</td>
-                    <td>@contact.Status ? "Resolved" : "Pending"</td>
+                    <td>@(contact.Status ? "Resolved" : "Pending")</td>
                     <td>
                         @if (!contact.Status)
                         {

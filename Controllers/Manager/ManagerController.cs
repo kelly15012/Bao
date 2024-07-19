@@ -17,9 +17,25 @@ namespace Bao.Controllers.Manager
             return View();
         }
 
-        public IActionResult ContactUsManagement()
+        //Get the data from database and pass to view
+        [HttpGet]
+        public async Task<IActionResult> ContactUsManagement()
         {
-            return View();
+            var contacts = await _context.Contacts.ToListAsync();
+            return View(contacts);
+        }
+
+        //Change status
+        [HttpPost]
+        public async Task<IActionResult> MarkAsResolved(int id)
+        {
+            var contact = await _context.Contacts.FindAsync(id);
+            if (contact != null && !contact.Status)
+            {
+                contact.Status = true;
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(ContactUsManagement));
         }
 
         private readonly BaoContext _context;
