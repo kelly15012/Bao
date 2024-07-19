@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace Bao.Controllers.Baozi
 {
-    [Authorize(Roles = "Baozi")]
     public class OrderController : Controller
     {
         private readonly BaoContext _context;
@@ -41,7 +40,7 @@ namespace Bao.Controllers.Baozi
             return View("~/Views/Baozi/Order.cshtml", orders);
         }
 
-        // GET: Order/Details/5
+        // GET: Order/Details
         public async Task<IActionResult> Details(int id)
         {
             var user = await _userManager.GetUserAsync(User);

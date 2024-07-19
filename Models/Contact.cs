@@ -19,5 +19,8 @@ namespace Bao.Models
         [Required]
         [StringLength(1000)]
         public required string Message { get; set; }
+
+        [Required]
+        public bool Status { get; set; }
     }
 }
